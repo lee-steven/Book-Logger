@@ -3,13 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Let's Book It</title>
+    <title>Check</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/normalize.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css" />
 </head>
 <body>
+
     
+    <div id='listWrapper'>
+        <ul id='listBooks'>
+        </ul>
+
+        <button id='addBook'>Add Book</button>
+
+        <div class='modal'>
+            <div class= 'modal-content'>
+                <span class= 'close-btn'>&times;</span>
+                <h1></h1>
+                <form id="addBookForm">
+                    <input type='text' id='title' placeholder='Title'><br>
+                    <input type='text' id='author' placeholder='Author'><br>
+                    <input type='text' id='pages' placeholder='# of Pages'><br>
+                    <input type='text' id='notes' placeholder='Notes'><br>
+                    <input type='radio' name='finished' value='Yes'>Yes<br>
+                    <input type='radio' name='finished' value='No'>No<br>
+                    <input type='button' id='submit' name='submit' value='Add Book'>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
+<script src="main.js"></script>
+
 </html>
