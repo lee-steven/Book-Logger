@@ -1,104 +1,42 @@
-html, body{
-  font-family: Helvetica; 
-}
-
-/*  LOGIN PAGE  */
-#loginForm {
-  background: #fafafa;
-}
-#loginForm #loginFormHeader h4{
-  padding: 35px 30px 10px 10px;
-  margin-top: 0px;
-  font-weight: normal;
-  font-family: Arial;
-  color: #787878;
-  float: left;
-}
-
-#loginForm #loginFormHeader img{
-  padding: 20px 0px 0px 30px;
-  float: left;
-}
-
-#loginForm #loginFormContent{
-  padding: 130px 5vw;
-}
-
-#signUpForm{
-  padding: 120px 80px;
-  background: rgb(50,168,162);
-  background: linear-gradient(217deg, rgba(50,168,162,1) 37%, rgba(110,212,177,1) 96%);
-}
-
-#loginWrapper{
-  display: grid;
-  grid-template-columns: 1.5fr 1fr; 
-  width: 100vw;
-  height: 100vh;
-}
-
-#loginWrapper button{
-  padding: 12px 70px;
-  border-radius: 20px;
-}
-
-#loginWrapper h3{
-  font-family: Helvetica;
-  font-weight: bold;
-  font-size: 50px;
-  text-align: center;
-  color: #32a8a2;
-}
-
-#loginForm button{
-  background: #32a8a2;
-  color: white;
-  border: solid 2px #32a8a2;
-  margin: 30px 10px 10px 17vw;
-}
-
-#loginForm button:hover{
-  background: white;
-  color: #32a8a2;
- 
-}
-
-#loginForm input[type='text']{
-  border: none;
-  background: #fafafa;
-  outline: none;
-  border-bottom: 2px solid #e8e8e8;
-
-  padding: 15px 10px 15px 10px;
-  margin: 20px 10px 10px 8vw;
-  width: 30vw;
-  color: #8c8c8c;
+html {
+    background-color: #f5f5f5;
+    font-family: "Avenir Next";
 
 }
 
-#signUpForm h3{
-  color: white;
-
+h1{
+    font-size: 50px;
+    text-align: center;
+    padding: 5% 5% 2% 5%;
 }
 
-#signUpForm p{
-  color: white;
-  margin-bottom: 100px;
-  text-align: center;;
+p{
+    font-size: 12px;
 }
 
-
-#signUpForm button{
-  background: white;
-  color: #32a8a2;
-  border: solid 2px white;
-
-  margin: 70px 10px 10px 6vw;
+#addBook{
+    padding: 12px 70px;
+    border-radius: 20px;
+    outline: none;
+    background: #76dbc0;
+    color: white;
+    border: solid 2px #76dbc0;
+    margin: 0px 0px 5vw 42.5vw;
+    cursor: pointer;
 }
 
-#signUpForm button:hover{
-  background: #32a8a2;
-  color: white;
+#addBook:hover{
+    background: white;
+    color: #76dbc0;
+}
+
+#listBooks {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#listBooks div {
+    text-align: center;
 }
 
 /*  BOOK LIST PAGE  */

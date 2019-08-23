@@ -3,24 +3,21 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Check</title>
+    <title>My Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/normalize.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="CSS/main.css" />
 </head>
 <body>
 
-    
-    <div id='listWrapper'>
-        <ul id='listBooks'>
-        </ul>
+    <div>
+        <h1>My Library</h1>
 
         <button id='addBook'>Add Book</button>
 
         <div class='modal'>
             <div class= 'modal-content'>
                 <span class= 'close-btn'>&times;</span>
-                <h1></h1>
                 <form id="addBookForm">
                     <input type='text' id='title' placeholder='Title'><br>
                     <input type='text' id='author' placeholder='Author'><br>
@@ -32,6 +29,13 @@
                 </form>
             </div>
         </div>
+    </div>
+
+    <div id='listWrapper'>
+        <ul id='listBooks'>
+        </ul>
+
+
     </div>
 
 </body>

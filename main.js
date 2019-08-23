@@ -11,21 +11,48 @@ function Book(title, author, pages, notes, read){
     } 
 }
 
-
-
 function addBookToLibrary(book){
     myLibrary.push(book);
 }
 
 function render(){
-    let list = document.getElementById('listBooks');
 
     for(let i = 0; i < myLibrary.length; i++){
-        let li = document.createElement('li');
-        list.appendChild(li);
-        li.innerHTML = myLibrary[i].info();
-        
+        createCard(myLibrary[i]);        
     }
+}
+
+function createCard(book){
+    let list = document.getElementById('listBooks');
+
+    let card = document.createElement('div');
+
+    let titleCard = document.createElement('h3');
+    titleCard.innerHTML = book.title;
+    card.appendChild(titleCard);
+
+    let authorCard = document.createElement('h6');
+    authorCard.innerHTML = book.author;
+    card.appendChild(authorCard);
+
+    let pagesCard = document.createElement('p');
+    pagesCard.innerHTML = book.pages;
+    card.appendChild(pagesCard);
+
+    let notesCard = document.createElement('p');
+    notesCard.innerHTML = book.notes;
+    card.appendChild(notesCard);
+
+    card.style.width = "200px";
+    card.style.height = "200px";
+    card.style.background = "white";
+    card.style.color = "gray";
+    card.style.borderRadius = "5px";
+    card.style.padding = "20px"
+    card.style.margin = "20px"
+    card.style.boxShadow = "10px 10px 10px lightgray";
+
+    list.appendChild(card);
 }
 
 let modalBtn = document.getElementById("addBook")
@@ -44,9 +71,9 @@ window.onclick = function(e){
 }
 
 //  DELETE LATER: CREATED FOR TESTING PURPOSES  // 
-const hobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'hello', true);
-const harrypotter = new Book('Harry Potter', 'J.K. Rowling', 100, 'hello', true);
-const theroad = new Book('The Road', 'Cormac McCarthy', 300, 'hello', true);
+const hobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'Loved the hobbit over the trilogy which is weird I guess haha', true);
+const harrypotter = new Book('Harry Potter', 'J.K. Rowling', 100, 'A childhood classic. The books are better than the movies.', true);
+const theroad = new Book('The Road', 'Cormac McCarthy', 300, 'This book is really sad but I really loved it, one of my favoirte books', true);
 myLibrary[0] = hobbit;
 myLibrary[1] = harrypotter;
 myLibrary[2] = theroad;
@@ -76,16 +103,11 @@ function addBookToLibrary(){
 
     modal.style.display = "none"
 
-    var li = document.createElement('li');
-    var liText = document.createTextNode(myLibrary[myLibrary.length-1].info());
-    li.appendChild(liText);
-    document.getElementById('listBooks').appendChild(li);
-
-
-//     var node = document.createElement("LI");                 // Create a <li> node
-// var textnode = document.createTextNode("Water");         // Create a text node
-// node.appendChild(textnode);                              // Append the text to <li>
-// document.getElementById("myList").appendChild(node);     // Append <li> to <ul> with id="myList"
+    // var li = document.createElement('li');
+    // var liText = document.createTextNode(myLibrary[myLibrary.length-1].info());
+    // li.appendChild(liText);
+    // document.getElementById('listBooks').appendChild(li);
+    createCard(myLibrary[myLibrary.length-1]);
 }
 
 
